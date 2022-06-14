@@ -1,0 +1,82 @@
+.contact-container {
+    padding: 50px 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-container form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.contact-container form label {
+    margin-top: 30px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.contact-container form .contact-input {
+    height: 40px;
+    box-shadow: -2px 5px 20px rgba(0, 0, 0, .3);
+    border-radius: 5px;
+    border: none;
+    margin-top: 10px;
+    padding: 0 10px;
+    font-size: 20px;
+}
+
+.contact-container form .contact-message {
+    box-shadow: -2px 5px 20px rgba(0, 0, 0, .3);
+    border-radius: 5px;
+    border: none;
+    margin-top: 10px;
+    padding: 10px;
+    font-size: 20px;
+}
+
+.contact-container form .contact-submit {
+    margin-top: 30px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.contact-container form .contact-submit input:hover {
+    animation-name: hoverbtn;
+    animation-duration: 0.2s;
+    animation-fill-mode: forwards;
+}
+
+.contact-container form .contact-submit input:not(:hover) {
+    animation-name: hoverbtn-reverse;
+    animation-duration: 0.2s;
+    animation-fill-mode: forwards;
+}
+
+.contact-container form .contact-submit input {
+    color: #FFF;
+    background-color: #101726;
+    border-radius: 50px;
+    padding: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.contact-container form select {
+    padding: 5px;
+}
+
+@media only screen and (max-width: 1250px) {
+    .contact-container {
+        padding: 50px 100px;
+    }
+}
+
+@media only screen and (max-width: 720px) {
+    .contact-container {
+        padding: 50px 40px;
+    }
+}

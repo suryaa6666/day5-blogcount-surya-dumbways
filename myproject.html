@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<head>
+  <title>MY PROJECT</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="myproject.css">
+  <link rel="icon" href="assets/icon.png" type="image/png">
+</head>
+
+<body>
+  <nav>
+    <img src="assets/logo.png" alt="Maaf gambar tidak tersedia">
+    <div class="nav-container">
+      <ul class="nav-left">
+        <div class="nav-item">
+          <li><a href="index.html">Home</a></li>
+        </div>
+        <div class="nav-item">
+          <li><a href="myproject.html">My Project</a></li>
+        </div>
+      </ul>
+      <div class="nav-right">
+        <a href="contact.html">Contact Me</a>
+      </div>
+      <div class="hamburger">
+        <a onclick="openHamburger()"><i class="fa-2x fas fa-bars"></i></a>
+      </div>
+    </div>
+  </nav>
+  <div class="hamburger-nav-container" id="hamburger-nav-container">
+    <div class="hamburger-nav-item">
+      <li><a href="index.html">Home</a></li>
+    </div>
+    <div class="hamburger-nav-item">
+      <li><a href="myproject.html">My Project</a></li>
+    </div>
+    <div class="hamburger-nav-item">
+      <li><a href="contact.html">Contact Me</a></li>
+    </div>
+  </div>
+  <div class="myproject-container">
+    <h1>ADD MY PROJECT</h1>
+    <form action="">
+      <label for="name">Project Name</label>
+      <input type="text" name="name" id="name" class="myproject-input" required>
+      <div class="date-container">
+        <div class="date-item">
+          <label for="startdate">Start Date</label>
+          <input type="date" name="startdate" id="startdate" class="myproject-input" required>
+        </div>
+        <div style="width: 30px;">
+        </div>
+        <div class="date-item">
+          <label for="enddate">End Date</label>
+          <input type="date" name="enddate" id="enddate" class="myproject-input" required>
+        </div>
+      </div>
+      <label for="description">Description</label>
+      <textarea name="description" id="description" class="myproject-description" rows="5" required></textarea>
+      <label for="name">Technologies</label>
+      <div class="technologies-container">
+        <div class="technologies-item">
+          <label for="nodejs">
+            <input type="checkbox" name="nodejs" value="nodejs" id="nodejs" onclick="checkboxCheck()">
+            <span>Node JS</span>
+          </label>
+          <label for="reactjs">
+            <input type="checkbox" name="reactjs" value="reactjs" id="reactjs" onclick="checkboxCheck()">
+            <span>React JS</span>
+          </label>
+        </div>
+        <div class="technologies-item">
+          <label for="nextjs">
+            <input type="checkbox" name="nextjs" value="nextjs" id="nextjs" onclick="checkboxCheck()">
+            <span>Next JS</span>
+          </label>
+          <label for="typescript">
+            <input type="checkbox" name="typescript" value="typescript" id="typescript" onclick="checkboxCheck()">
+            <span>TypeScript</span>
+          </label>
+        </div>
+      </div>
+      <label for="image">Upload Image</label>
+      <div class="myproject-input-image">
+        <div class="myproject-input-image-container" onclick="imageClick(event);">
+          <button class="choose-image-btn">choose</button>
+          <small class="myproject-input-image-name" id="myproject-input-image-name">No image selected...</small>
+          <div class="paper-clip-container">
+            <i class="fa-solid fa-paperclip" class="paper-clip"></i>
+          </div>
+        </div>
+        <input type="file" accept="image/*" name="image" id="image" class="input-image" required onchange="changeImageFilename();">
+      </div>
+      <div class="myproject-submit">
+        <input type="button" onclick="submitData(event)" value="Submit">
+      </div>
+    </form>
+  </div>
+
+  <div class="project-body">
+    <h1>MY PROJECT</h1>
+    <div class="project-container" class="project-container" id="project-container">
+    </div>
+  </div>
+  <script src="myproject.js"></script>
+  <script src="script.js"></script>
+  <script src="https://kit.fontawesome.com/595039b2d5.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
